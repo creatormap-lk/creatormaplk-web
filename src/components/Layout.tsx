@@ -52,7 +52,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                             <img src={logo} alt="CreatorMap Logo" className="nav-logo-img" />
                         </Link>
                     </div>
-                    <a href="/join" className="btn-primary nav-btn">Join Waitlist</a>
+                    <Link to="/join" className="btn-primary nav-btn">Join Waitlist</Link>
                 </div>
             </nav>
 
