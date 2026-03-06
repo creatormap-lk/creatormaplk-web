@@ -8,18 +8,37 @@ const Join = () => {
         name: '',
         email: '',
         role: 'creator',
-        message: ''
+        phoneNumber: ''
     })
+
+    // Replace this with your Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwq-vpw0T4mhP5Jg_H9s8yoU39L0WkN74EfB7TA6muck2sNCfI-2LAjm8icjPB4Ad26/exec'
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
         setStatus('submitting')
 
-        // Simulate API call to Google Sheets
-        setTimeout(() => {
-            console.log('Form data submitted:', formData)
+        try {
+            // Mapping form data to the requested Google Sheet column names
+            const data = new FormData()
+            data.append('name', formData.name)
+            data.append('email', formData.email)
+            data.append('occupation', formData.role) // Current 'role' maps to 'occupation'
+            data.append('phone', formData.phoneNumber) // Current 'phoneNumber' maps to 'phone'
+
+            await fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+
+            console.log('Form data submitted successfully')
             setStatus('success')
-        }, 1500)
+        } catch (error) {
+            console.error('Error submitting form:', error)
+            alert('Something went wrong. Please try again.')
+            setStatus('idle')
+        }
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -86,15 +105,15 @@ const Join = () => {
                             </div>
 
                             <div>
-                                <label className="label">Message or Niche (Optional)</label>
-                                <textarea
-                                    name="message"
-                                    value={formData.message}
+                                <label className="label">Phone Number</label>
+                                <input
+                                    required
+                                    type="tel"
+                                    name="phoneNumber"
+                                    value={formData.phoneNumber}
                                     onChange={handleChange}
-                                    rows={4}
                                     className="input-field"
-                                    style={{ resize: 'none' }}
-                                    placeholder="Tell us a bit about yourself..."
+                                    placeholder="+94 77 123 4567"
                                 />
                             </div>
 
