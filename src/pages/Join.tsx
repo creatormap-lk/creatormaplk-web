@@ -99,8 +99,8 @@ const Join = () => {
                                     className="input-field"
                                     style={{ appearance: 'none' }}
                                 >
-                                    <option value="creator" style={{ background: '#0f172a', color: 'white' }}>Content Creator</option>
-                                    <option value="business" style={{ background: '#0f172a', color: 'white' }}>Business / Brand</option>
+                                    <option value="creator">Content Creator</option>
+                                    <option value="business">Business / Brand</option>
                                 </select>
                             </div>
 

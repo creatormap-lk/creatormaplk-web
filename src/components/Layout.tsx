@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo1.png'
+import logo from '../assets/logo3.png'
 import '../index.css'
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
