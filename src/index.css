@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
 
 :root {
-  --brand-purple: #645D79;
-  --brand-coral: #BE7263;
+  --brand-purple: #A28BB8;
+  --brand-mauve: #B784A7;
+  --brand-coral: #F08C7B;
   --bg-main: #f8fafc;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
-  --accent-glow: rgba(100, 93, 121, 0.1);
-  --coral-glow: rgba(190, 114, 99, 0.1);
+  --accent-glow: rgba(162, 139, 184, 0.15);
+  --coral-glow: rgba(240, 140, 123, 0.15);
 }
 
 * {
@@ -40,6 +41,19 @@ h6 {
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  /* Multi-layered shadow to create a gradient effect strictly outside the card */
+  box-shadow:
+    8px 8px 30px -5px rgba(162, 139, 184, 0.4),
+    /* Deep Lavender */
+    16px 16px 45px -10px rgba(183, 132, 167, 0.3),
+    /* Opera Mauve */
+    24px 24px 60px -15px rgba(240, 140, 123, 0.2);
+  /* Warm Coral */
 }
 
 .gradient-text {
@@ -50,7 +64,7 @@ h6 {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-coral) 100%);
+  background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-mauve) 50%, var(--brand-coral) 100%);
   color: white;
   padding: 12px 32px;
   border-radius: 50px;
@@ -125,6 +139,18 @@ h6 {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
   }
 }
 
@@ -260,7 +286,7 @@ h6 {
 }
 
 .rocket-container {
-  background: linear-gradient(135deg, var(--brand-purple), var(--brand-coral));
+  background: linear-gradient(135deg, var(--brand-purple), var(--brand-mauve), var(--brand-coral));
   padding: 32px;
   border-radius: 9999px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);

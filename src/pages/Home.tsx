@@ -19,10 +19,10 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', fontWeight: 'bold', lineHeight: 1.1, marginBottom: '1.5rem' }}
+                style={{ fontSize: 'clamp(2.1rem, 8vw, 4.5rem)', fontWeight: 'bold', lineHeight: 1.1, marginBottom: '1.5rem' }}
             >
-                Connecting <span className="gradient-text">Businesses</span> & <br className="hidden md:block" />
-                <span style={{ color: 'var(--brand-coral)' }}>Content Creators</span>
+                For <span className="gradient-text">Sri Lankans.</span> <br className="hidden md:block" />
+                By <span style={{ color: 'var(--brand-coral)' }}>Sri Lankans 🇱🇰</span>
             </motion.h1>
 
             <motion.p
@@ -32,7 +32,7 @@ const Home = () => {
                 className="mb-12"
                 style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', maxWidth: '40rem' }}
             >
-                The ultimate platform for creative growth. We bridge the gap between vision and execution, helping you scale with the right partners.
+                Be part of a platform built to empower local creators and businesses of every scale, helping talent and opportunities grow within Sri Lanka.
             </motion.p>
 
             <motion.div
@@ -92,21 +92,34 @@ const Home = () => {
             </div>
 
             {/* Sub-features */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32 text-left">
-                <div className="glass-card p-8">
-                    <TrendingUp style={{ color: 'var(--brand-coral)', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Growth</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Empowering brands to reach new heights through creator collaboration.</p>
+            <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mt-32 text-left">
+                {/* First Row: 3 Cards */}
+                <div className="glass-card p-8 md:col-span-2">
+                    <TrendingUp style={{ color: 'var(--brand-purple)', marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Get Paid Nearby 📍</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Discover creators and opportunities around you with our interactive map feature. Find collaborators close to your location and start working together instantly.</p>
                 </div>
-                <div className="glass-card p-8">
-                    <Sparkles style={{ color: 'var(--brand-purple)', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Innovation</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>A modern approach to influencer marketing and content strategy.</p>
+                <div className="glass-card p-8 md:col-span-2">
+                    <Users style={{ color: 'var(--brand-mauve)', marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Collaborate with Purpose 🤝</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Every collaboration creates impact. 5% of every collaboration goes towards charity, helping support meaningful causes.</p>
                 </div>
-                <div className="glass-card p-8">
-                    <Users style={{ color: 'var(--brand-coral)', marginBottom: '1rem' }} />
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Collaboration</h3>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Building lasting connections between visionaries and creators.</p>
+                <div className="glass-card p-8 md:col-span-2">
+                    <Sparkles style={{ color: 'var(--brand-coral)', marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>AI-Powered Search 🤖</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Find exactly what you need with semantic AI search. Easily discover the right creators, manage campaigns, and organize content calendars.</p>
+                </div>
+
+                {/* Second Row: 2 Cards (centered) */}
+                <div className="glass-card p-8 md:col-start-2 md:col-span-2">
+                    <Rocket style={{ color: 'var(--brand-purple)', marginBottom: '1rem' }} />
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>No Commitments ⚡</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Connect and collaborate freely. Businesses and creators can work together without contracts or long-term obligations.</p>
+                </div>
+                <div className="glass-card p-8 md:col-span-2">
+                    <div style={{ color: 'var(--brand-coral)', marginBottom: '1rem', fontWeight: 'bold', fontSize: '1.25rem' }}>LKR</div>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Start Small. Start Smart. 💰</h3>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>No big budgets required. Launch campaigns or find editors and creators starting from just LKR 1,000.</p>
                 </div>
             </div>
         </div>
