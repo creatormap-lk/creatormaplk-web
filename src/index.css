@@ -34,18 +34,23 @@ h1, h2, h3, h4, h5, h6 {
 ============================================================ */
 .layout-root {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 /* Main content container — max 1400px on very large monitors */
 main {
   padding-top: clamp(5rem, 10vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
   padding-left: clamp(1rem, 5vw, 3rem);
   padding-right: clamp(1rem, 5vw, 3rem);
   max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   z-index: 10;
+  flex: 1;
 }
 
 /* ============================================================

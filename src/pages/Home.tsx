@@ -24,9 +24,9 @@ const Home = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="hero-headline"
                 >
-                    Connecting Sri Lankan Brands with{' '}
+                    Everything You Need to Grow with{' '}
                     <br />
-                    <span style={{ color: 'var(--primary-color)' }}>Creative Talent</span>
+                    <span style={{ color: 'var(--primary-color)' }}>Influencers</span>
                 </motion.h1>
 
                 <motion.p
