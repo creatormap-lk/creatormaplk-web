@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { Rocket, ArrowRight, Sparkles, TrendingUp, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { SiYoutube, SiTiktok, SiInstagram } from "react-icons/si";
+
 
 const Home = () => {
     return (
@@ -29,26 +32,207 @@ const Home = () => {
                     <span style={{ color: 'var(--primary-color)' }}>Influencers</span>
                 </motion.h1>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="hero-subtext"
-                >
-                    Discover and collaborate with local content creators near you. Build campaigns,
-                    promote your products, and grow opportunities inside Sri Lanka starting from LKR 1,000.
-                </motion.p>
+{/* <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "16px",
+    flexWrap: "wrap",
+    marginTop: "24px",
+    padding: "20px 0",
+  }}
+>
+  {[
+    { name: "YouTube", icon: FaYoutube },
+    { name: "TikTok", icon: FaTiktok },
+    { name: "Instagram", icon: FaInstagram },
+  ].map(({ name, icon: Icon }) => (
+    <div
+      key={name}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        backgroundColor: "#1a3700",
+        borderRadius: "9999px",
+        padding: "12px 24px",
+        color: "#ffffff",
+      }}
+    >
+      <Icon style={{ color: "#ffffff", fontSize: "20px" }} />
+      <span style={{ color: "#ffffff", fontSize: "14px", fontWeight: 500 }}>
+        {name}
+      </span>
+    </div>
+  ))}
+</motion.div> */}
 
+{/* <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+    marginTop: "5px",
+    padding: "12px 0",
+    marginBottom: "20px",
+  }}
+>
+  {[
+    { name: "YouTube", icon: FaYoutube },
+    { name: "TikTok", icon: FaTiktok },
+    { name: "Instagram", icon: FaInstagram },
+  ].map(({ name, icon: Icon }) => (
+    <div
+      key={name}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        backgroundColor: "#1a3700",
+        borderRadius: "9999px",
+        padding: "8px 16px",
+        color: "#ffffff",
+      }}
+    >
+      <Icon style={{ color: "#ffffff", fontSize: "15px" }} />
+      <span
+        style={{
+          color: "#ffffff",
+          fontSize: "12px",
+          fontWeight: 500,
+        }}
+      >
+        {name}
+      </span>
+    </div>
+  ))}
+</motion.div> */}
+
+
+{/* <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+    marginTop: "5px",
+    padding: "12px 0",
+    marginBottom: "20px",
+  }}
+>
+  {[
+    { name: "YouTube", icon: SiYoutube },
+    { name: "TikTok", icon: SiTiktok },
+    { name: "Instagram", icon: SiInstagram },
+  ].map(({ name, icon: Icon }) => (
+    <div
+      key={name}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        backgroundColor: "#1a3700",
+        borderRadius: "9999px",
+        padding: "8px 16px",
+      }}
+    >
+      <Icon
+        style={{
+          fontSize: "15px",
+        }}
+      />
+
+      <span
+        style={{
+          color: "#ffffff",
+          fontSize: "12px",
+          fontWeight: 500,
+        }}
+      >
+        {name}
+      </span>
+    </div>
+  ))}
+</motion.div> */}
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.3 }}
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+    marginTop: "5px",
+    padding: "12px 0",
+    marginBottom: "20px",
+  }}
+>
+  {[
+    { name: "YouTube", icon: SiYoutube },
+    { name: "TikTok", icon: SiTiktok },
+    { name: "Instagram", icon: SiInstagram },
+  ].map(({ name, icon: Icon }) => (
+    <div
+      key={name}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+        backgroundColor: "transparent",
+        border: "1px solid var(--primary-color)",
+        borderRadius: "9999px",
+        padding: "8px 16px",
+        cursor: "default",
+      }}
+    >
+      <Icon
+        style={{
+          fontSize: "15px",
+        }}
+      />
+
+      <span
+        style={{
+          color: "#000000ff",
+          fontSize: "12px",
+          fontWeight: 500,
+        }}
+      >
+        {name}
+      </span>
+    </div>
+  ))}
+</motion.div>
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="hero-cta"
-                >
-                    <Link to="/join" className="btn-primary">
-                        Join Us <ArrowRight size={20} />
-                    </Link>
-                </motion.div>
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="hero-cta flex items-center gap-4"
+>
+  <Link to="/join" className="btn-primary">
+    Join Us <ArrowRight size={20} />
+  </Link>
+
+  <Link to="" className="btn-primary">
+    Book a Demo
+  </Link>
+</motion.div>
 
                 {/* Rocket Illustration */}
                 <div className="rocket-section">
