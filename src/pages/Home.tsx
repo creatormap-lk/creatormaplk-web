@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Rocket, ArrowRight, Sparkles, TrendingUp, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa6";
 import { SiYoutube, SiTiktok, SiInstagram } from "react-icons/si";
 
 
