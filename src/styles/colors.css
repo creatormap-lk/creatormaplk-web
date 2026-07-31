@@ -1,0 +1,17 @@
+:root {
+  /* Primary Color */
+  --primary-color: #1A3701;
+  --primary-glow: rgba(26, 55, 1, 0.15);
+
+  /* Legacy brand mappings mapped to primary color */
+  --brand-purple: var(--primary-color);
+  --accent-glow: var(--primary-glow);
+
+  /* Other Brand Colors */
+  --brand-mauve: #B784A7;
+  --brand-coral: #F08C7B;
+  --bg-main: #e8fad6;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --coral-glow: rgba(240, 140, 123, 0.15);
+}

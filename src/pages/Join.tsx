@@ -49,7 +49,7 @@ const Join = () => {
     }
 
     return (
-        <div style={{ maxWidth: '42rem', margin: '0 auto', padding: '3rem 0' }}>
+        <div className="join-container">
             <AnimatePresence mode="wait">
                 {status !== 'success' ? (
                     <motion.div
@@ -57,10 +57,11 @@ const Join = () => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 20 }}
-                        className="glass-card p-8 md:p-12"
+                        className="glass-card"
+                        style={{ padding: 'clamp(1.5rem, 4vw, 3rem)' }}
                     >
-                        <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Join the Waitlist</h2>
-                        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Be the first to know when we launch and get exclusive early access perks.</p>
+                        <h2 className="join-title">Join the Waitlist</h2>
+                        <p className="join-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Be the first to know when we launch and get exclusive early access perks.</p>
 
                         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -135,15 +136,16 @@ const Join = () => {
                         key="success"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="glass-card p-12 text-center"
+                        className="glass-card text-center"
+                        style={{ padding: 'clamp(1.5rem, 4vw, 3rem)' }}
                     >
                         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
                             <div style={{ padding: '1rem', background: 'rgba(34, 197, 94, 0.1)', borderRadius: '9999px' }}>
                                 <CheckCircle2 size={64} style={{ color: '#22c55e' }} />
                             </div>
                         </div>
-                        <h2 style={{ fontSize: '2.25rem', fontWeight: 'bold', marginBottom: '1rem' }}>You're on the list! 🎉</h2>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', marginBottom: '2rem' }}>
+                        <h2 className="success-title">You're on the list! 🎉</h2>
+                        <p className="success-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
                             Thanks for joining us, {formData.name.split(' ')[0]}! We'll reach out soon with more details about our launch.
                         </p>
                         <button
