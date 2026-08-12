@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Rocket, ArrowRight, Sparkles, TrendingUp, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { SiYoutube, SiTiktok, SiInstagram } from "react-icons/si";
-
+//test
 
 const Home = () => {
     return (
