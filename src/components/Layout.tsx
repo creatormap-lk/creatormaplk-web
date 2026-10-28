@@ -57,6 +57,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
             {/* Footer */}
             <footer>
+                <div className="footer-links">
+                    <Link to="/terms">Terms of Service</Link>
+                    <Link to="/privacy">Privacy Policy</Link>
+                </div>
                 <p>© 2026 CreatorMap. All rights reserved.</p>
             </footer>
         </div>
